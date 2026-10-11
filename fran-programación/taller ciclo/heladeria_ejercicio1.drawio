@@ -1,0 +1,102 @@
+<mxfile host="app.diagrams.net" agent="ChatGPT">
+  <diagram id="heladeria1" name="Ejercicio 1 - Heladeria">
+    <mxGraphModel dx="1012" dy="547" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="start" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontStyle=1;" value="INICIO" vertex="1">
+          <mxGeometry height="50" width="150" x="330" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="init" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="continuar = &quot;s&quot;&lt;br&gt;contador = 0&lt;br&gt;total = 0&lt;br&gt;Crear listas de toppings y precios" vertex="1">
+          <mxGeometry height="100" width="280" x="265" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-3" edge="1" parent="1" source="loop" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="menu" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-5" edge="1" parent="1" source="loop" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="315.3529411764706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-6" edge="1" parent="1" source="loop" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="580" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="loop" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;" value="¿continuar = &quot;s&quot;&lt;br&gt;o continuar = &quot;S&quot;?" vertex="1">
+          <mxGeometry height="110" width="210" x="300" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="menu" parent="1" style="parallelogram;whiteSpace=wrap;html=1;fillColor=none;" value="Mostrar menú de toppings&lt;br&gt;Pedir opción (0 a 4)" vertex="1">
+          <mxGeometry height="75" width="250" x="280" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="valid" parent="1" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;" value="¿opcion está&lt;br&gt;entre 0 y 4?" vertex="1">
+          <mxGeometry height="105" width="200" x="305" y="535" as="geometry" />
+        </mxCell>
+        <mxCell id="calc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="topping = toppings[opcion]&lt;br&gt;precio = 1.90 + precios[opcion]&lt;br&gt;total = total + precio&lt;br&gt;contador = contador + 1&lt;br&gt;Mostrar topping y precio" vertex="1">
+          <mxGeometry height="125" width="320" x="245" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-1" edge="1" parent="1" source="wsxgFBWx8dP1adRTzaOF-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="valid" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="invalid" parent="1" style="parallelogram;whiteSpace=wrap;html=1;fillColor=none;" value="Mostrar &quot;Opción incorrecta&quot;" vertex="1">
+          <mxGeometry height="60" width="210" x="620" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="again" parent="1" style="parallelogram;whiteSpace=wrap;html=1;" value="¿Desea hacer otro pedido?&lt;br&gt;Leer continuar (s/n)" vertex="1">
+          <mxGeometry height="75" width="250" x="280" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="results" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="Mostrar cantidad de pedidos&lt;br&gt;Mostrar total a pagar&lt;br&gt;Mostrar mensaje de despedida" vertex="1">
+          <mxGeometry height="85" width="280" x="265" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;fontStyle=1;" value="FIN" vertex="1">
+          <mxGeometry height="50" width="150" x="330" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="start" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="init">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="init" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="loop">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="menu" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="valid">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="valid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="calc" value="Sí">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="calc" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="again">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="invalid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="again">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="again" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="init" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="920.06" />
+              <mxPoint x="180" y="169.94" />
+            </Array>
+            <mxPoint x="250" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="results" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=1;" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-7" edge="1" parent="1" source="invalid" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="wsxgFBWx8dP1adRTzaOF-8" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="580" as="sourcePoint" />
+            <mxPoint x="505" y="587" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-8" parent="1" style="shape=waypoint;sketch=0;size=6;pointerEvents=1;points=[];fillColor=none;resizable=0;rotatable=0;perimeter=centerPerimeter;snapToPoint=1;" value="" vertex="1">
+          <mxGeometry height="20" width="20" x="555" y="568" as="geometry" />
+        </mxCell>
+        <mxCell id="wsxgFBWx8dP1adRTzaOF-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="no&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="520" y="558" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
